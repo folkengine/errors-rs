@@ -1,15 +1,10 @@
 use std::io::Write; // needed for write!()
 
-fn hello(filename: &std::path::Path) {
-    let file = match std::fs::File::create(filename) {
-        Ok(f) => f,
-        Err(_) => panic!()
-    };
-    if let Err(_) = write!(&file, "Hello world!\n") {
-        panic!("Error writing to file.");
-    }
+fn hello(filename: &std::path::Path) -> Result<(), std::io::Error> {
+    let file = std::fs::File::create(filename)?; // the question mark
+    write!(&file, "Hello world!\n")
 }
 
-fn main() {
-    hello(std::path::Path::new("hello.txt"));
+fn main() -> Result<(), std::io::Error> {
+    hello(std::path::Path::new("hello.txt"))
 }

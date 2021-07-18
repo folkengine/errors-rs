@@ -1,8 +1,13 @@
 use std::io::Write; // needed for write!()
 
 fn hello(filename: &std::path::Path) {
-    let file = std::fs::File::create(filename).unwrap();
-    write!(&file, "Hello world!!\n").expect("Error writing to file.");
+    let file = match std::fs::File::create(filename) {
+        Ok(f) => f,
+        Err(_) => panic!()
+    };
+    if let Err(_) = write!(&file, "Hello world!\n") {
+        panic!("Error writing to file.");
+    }
 }
 
 fn main() {

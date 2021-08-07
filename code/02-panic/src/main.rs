@@ -6,5 +6,5 @@ fn hello(filename: &std::path::Path) {
 }
 
 fn main() {
-    hello(std::path::Path::new("hello.txt"));
+    hello(std::path::Path::new("numbers.txt"));
 }

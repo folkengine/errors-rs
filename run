@@ -9,6 +9,9 @@ case "${ARG1}" in
   "2" | "02")
      cd code/02-panic || exit
      ;;
+  "3" | "03")
+     cd code/03-dyn_error || exit
+     ;;
   *)
     echo "Nope!"
 esac

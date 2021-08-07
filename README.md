@@ -8,12 +8,13 @@ little cleanup.
 Under `code` is functioning code for each of the sections of the
 tutorial.
 
-
 * [Section 1](https://benkay86.github.io/rust-error-tutorial.html#result)
   Result?
 * [Section 2](https://benkay86.github.io/rust-error-tutorial.html#dont_panic)
   Don't Panic!
   * `02a-panic_desugared` has the desugared version of the code.
+* [Section 3](https://benkay86.github.io/rust-error-tutorial.html#dyn_error)
+  dyn Error
 
 # run script
 

@@ -1,2 +1,20 @@
 #!/usr/bin/env bash
 
+ARG1=${1:-1}
+
+case "${ARG1}" in
+  "1" | "01")
+    cd code/01-result || exit
+    ;;
+  "2" | "02")
+     cd code/02-panic || exit
+     ;;
+  *)
+    echo "Nope!"
+esac
+
+echo "❯ cd ${PWD}"
+echo
+
+./permissions && cargo run
+echo

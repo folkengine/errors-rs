@@ -33,3 +33,6 @@ src/main.rs:4:48
 note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
 ```
 
+# See Also
+
+* [Error Handling in Rust](https://blog.burntsushi.net/rust-error-handling/)
